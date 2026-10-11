@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>EDUmira Videos</title>
+<meta name="description" content="Watch EDUmira in action: a short product tour and a step-by-step tutorial for learners, teachers and school administrators.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="EDUmira">
+<meta property="og:url" content="https://westcottcarien-max.github.io/edumira-videos/">
+<meta property="og:title" content="EDUmira: see it in action">
+<meta property="og:description" content="The bilingual learning platform for Grades 4–7. Watch the product tour and the step-by-step tutorial.">
+<meta property="og:image" content="https://westcottcarien-max.github.io/edumira-videos/og-image.png">
+<meta property="og:image:secure_url" content="https://westcottcarien-max.github.io/edumira-videos/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The Edumira logo: learning that teaches first">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://westcottcarien-max.github.io/edumira-videos/og-image.png">
+<link rel="icon" href="logo-mark.png">
+<link rel="apple-touch-icon" href="logo-mark.png">
+<style>html,body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Nunito:wght@500;600;700;800&display=swap">
+<style>
+  /* Layout: a narrow single column, like a school notice board: brand header, the tour, then the tutorial with its chapter list. */
+  :root {
+    --bg: #f6f8f7;
+    --surface: #ffffff;
+    --ink: #0b2a55;
+    --ink-2: #3c5677;
+    --muted: #6a7f97;
+    --line: #dbe4ea;
+    --teal: #0f9d8a;
+    --teal-soft: #d9f2ee;
+    --sun: #f5b301;
+    --sun-soft: #fff1c7;
+    --font-display: 'Fredoka', 'Trebuchet MS', system-ui, sans-serif;
+    --font-body: 'Nunito', 'Segoe UI', system-ui, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0d1724; --surface: #142236; --ink: #e8eef6; --ink-2: #b8c6d8; --muted: #8ea2ba; --line: #24364d;
+      --teal: #33c2ad; --teal-soft: #123b39; --sun: #ffc53d; --sun-soft: #3a2f10; color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0d1724; --surface: #142236; --ink: #e8eef6; --ink-2: #b8c6d8; --muted: #8ea2ba; --line: #24364d;
+    --teal: #33c2ad; --teal-soft: #123b39; --sun: #ffc53d; --sun-soft: #3a2f10; color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 17px; line-height: 1.55; }
+  .wrap { max-width: 960px; margin: 0 auto; padding-inline: 16px; padding-block: 28px 56px; display: grid; gap: 40px; }
+  header { display: grid; gap: 14px; }
+  .brand { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+  .logo { background: #fff; border-radius: 20px; padding: 14px 22px; box-shadow: 0 2px 10px rgba(11, 42, 85, .08); display: inline-flex; }
+  .logo img { height: 84px; width: auto; display: block; }
+  @media (max-width: 480px) { .logo img { height: 60px; } }
+  .pill { font-weight: 800; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: var(--teal); background: var(--teal-soft); border-radius: 999px; padding: 6px 12px; }
+  h1, h2, h3 { font-family: var(--font-display); font-weight: 600; margin: 0; text-wrap: balance; letter-spacing: -.01em; }
+  h1 { font-size: clamp(30px, 5vw, 44px); line-height: 1.1; }
+  h2 { font-size: clamp(24px, 3.6vw, 30px); }
+  .lead { margin: 0; color: var(--ink-2); max-width: 62ch; font-size: 18px; }
+  section { display: grid; gap: 16px; }
+  .meta { color: var(--muted); font-size: 15px; margin: 0; }
+  .player { background: #000; border-radius: 18px; overflow: hidden; box-shadow: 0 10px 30px rgba(11, 42, 85, .16); aspect-ratio: 16 / 9; max-width: 100%; }
+  .player video { width: 100%; height: 100%; display: block; background: #000; }
+  .now { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+  .now strong { font-family: var(--font-display); font-weight: 600; font-size: 20px; }
+  .chapters { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+  .chapters button {
+    width: 100%; display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 14px; text-align: left;
+    background: var(--surface); color: var(--ink); border: 1px solid var(--line); border-radius: 14px; padding: 12px 16px;
+    font: inherit; cursor: pointer; transition: border-color .15s, background .15s;
+  }
+  .chapters button:hover { border-color: var(--teal); }
+  .chapters button:focus-visible { outline: 3px solid var(--sun); outline-offset: 2px; }
+  .chapters button[aria-current="true"] { border-color: var(--teal); background: var(--teal-soft); }
+  .num { font-family: var(--font-display); font-weight: 600; font-size: 15px; width: 34px; height: 34px; border-radius: 10px; display: grid; place-items: center; background: var(--sun-soft); color: var(--ink); }
+  .chapters button[aria-current="true"] .num { background: var(--teal); color: #fff; }
+  .ct { min-width: 0; display: grid; }
+  .ct b { font-weight: 800; }
+  .ct span { color: var(--muted); font-size: 15px; }
+  .dur { font-variant-numeric: tabular-nums; color: var(--muted); font-size: 15px; font-weight: 700; }
+  footer { color: var(--muted); font-size: 14px; border-top: 1px solid var(--line); padding-top: 18px; }
+  @media (prefers-reduced-motion: reduce) { .chapters button { transition: none; } }
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="brand">
+      <span class="logo"><img src="edumira-logo.png" alt="EDUmira"></span>
+      <span class="pill">Grades 4–7 · English + Afrikaans</span>
+    </div>
+    <h1>See EDUmira in action</h1>
+    <p class="lead">EDUmira is a bilingual learning platform built on the South African CAPS curriculum. Every lesson teaches first, then asks. Watch the short tour, or learn to use it step by step in the tutorial.</p>
+  </header>
+
+  <section id="tour" aria-labelledby="tour-h">
+    <h2 id="tour-h">Product tour</h2>
+    <p class="meta">4 min 42 s · learners, teachers and school administrators</p>
+    <div class="player"><video id="tourVideo" controls preload="metadata" playsinline poster="poster-tour.jpg" src="edumira-tour.mp4"></video></div>
+  </section>
+
+  <section id="tutorial" aria-labelledby="tut-h">
+    <h2 id="tut-h">Tutorial</h2>
+    <p class="meta" id="tutMeta">How to use EDUmira, chapter by chapter.</p>
+    <div class="player"><video id="tutVideo" controls preload="metadata" playsinline></video></div>
+    <div class="now" aria-live="polite"><strong id="nowTitle"></strong><span class="meta" id="nowSub"></span></div>
+    <ol class="chapters" id="chapters"></ol>
+  </section>
+
+  <footer>EDUmira · bilingual learning for Grades 4–7 · English and Afrikaans</footer>
+</div>
+
+<script>
+  // Filled in when the chapters are built: file, title, what it covers, length in seconds.
+  const CHAPTERS = /*CHAPTERS*/[
+  {
+    "file": "tutorial-1.mp4",
+    "poster": "poster-1.jpg",
+    "title": "Getting started",
+    "sub": "Signing in, the language switch, the menu and settings",
+    "seconds": 89
+  },
+  {
+    "file": "tutorial-2.mp4",
+    "poster": "poster-2.jpg",
+    "title": "Learners",
+    "sub": "Lessons, practice and marked questions, quizzes and marks",
+    "seconds": 174
+  },
+  {
+    "file": "tutorial-3.mp4",
+    "poster": "poster-3.jpg",
+    "title": "Teachers",
+    "sub": "Class overview, worksheets, marking, live monitor, reports and plans",
+    "seconds": 226
+  },
+  {
+    "file": "tutorial-4.mp4",
+    "poster": "poster-4.jpg",
+    "title": "School administrators",
+    "sub": "Importing learners, staff, roles, term dates and school settings",
+    "seconds": 106
+  },
+  {
+    "file": "tutorial-5.mp4",
+    "poster": "poster-5.jpg",
+    "title": "Platform administrators",
+    "sub": "Two-step login, schools, the lessons editor and SBA tasks",
+    "seconds": 62
+  }
+];
+  const fmt = (s) => `${Math.floor(s / 60)}:${String(Math.round(s % 60)).padStart(2, '0')}`;
+  const list = document.getElementById('chapters');
+  const video = document.getElementById('tutVideo');
+  const total = CHAPTERS.reduce((a, c) => a + c.seconds, 0);
+  if (total) document.getElementById('tutMeta').textContent = `${CHAPTERS.length} chapters · ${Math.round(total / 60)} minutes in all. Tap a chapter to watch it; the next one starts on its own.`;
+  let current = 0;
+  function choose(i, play) {
+    current = i;
+    const c = CHAPTERS[i];
+    video.src = c.file;
+    video.poster = c.poster;
+    document.getElementById('nowTitle').textContent = `Chapter ${i + 1}: ${c.title}`;
+    document.getElementById('nowSub').textContent = c.sub;
+    [...list.querySelectorAll('button')].forEach((b, k) => b.setAttribute('aria-current', String(k === i)));
+    if (play) video.play().catch(() => {});
+  }
+  CHAPTERS.forEach((c, i) => {
+    const li = document.createElement('li');
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.innerHTML = `<span class="num">${i + 1}</span><span class="ct"><b></b><span></span></span><span class="dur">${fmt(c.seconds)}</span>`;
+    b.querySelector('b').textContent = c.title;
+    b.querySelector('.ct span').textContent = c.sub;
+    b.addEventListener('click', () => choose(i, true));
+    li.append(b);
+    list.append(li);
+  });
+  video.addEventListener('ended', () => { if (current + 1 < CHAPTERS.length) choose(current + 1, true); });
+  if (CHAPTERS.length) choose(0, false);
+</script>
+
+</body>
+</html>
